@@ -42,7 +42,7 @@ public class ForsExample2 {
 
         for (int i = 0; i < param; i++) {
             int num = 1;
-            for (int j = 0; j < i + 1; j++) {
+            for (int j = 0; j <= i + 1; j++) {
 
 
                 System.out.print(num);
@@ -61,7 +61,7 @@ public class ForsExample2 {
         for (int i = 0; i < param; i++) {
 
 
-            for (int j =(param - i-1); j >0; j--) {
+            for (int j = (param - i - 1); j > 0; j--) {
                 // printing spaces
                 System.out.print(" ");
             }
