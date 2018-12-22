@@ -6,9 +6,27 @@ public class OOPForTrain {
         train.setName("Pendolino");
         train.setWeight(600);
         train.setNumberOfPassengers(500);
-        train.setNumberOfWagons(10);
 
-        System.out.println(train.toString());
+
+
+
+        Wagon firstWagon = new Wagon();
+        firstWagon.setFoodAvailable(true);
+        firstWagon.setNumberOfPassangers(25);
+        firstWagon.setWagonsClass("Pierwsza");
+        firstWagon.setWeight(300);
+
+
+        Wagon secondWagon = new Wagon();
+        secondWagon.setFoodAvailable(false);
+        secondWagon.setNumberOfPassangers(45);
+        secondWagon.setWeight(400);
+        secondWagon.setWagonsClass("druga");
+
+
+
+
+
     }
 
 
