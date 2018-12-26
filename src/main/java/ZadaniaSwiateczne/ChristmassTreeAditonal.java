@@ -8,6 +8,10 @@ public class ChristmassTreeAditonal {
 
         christmassTree(4);
 
+
+
+
+
     }
 
     private static void christmassTree(int size) {

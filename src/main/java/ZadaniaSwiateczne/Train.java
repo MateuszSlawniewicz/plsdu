@@ -27,20 +27,40 @@ public class Train {
 //    Utworz nowy pociąg i dodaj do niego wagony przy pomocy nowej metody, następnie wyświetl pociąg.
 
 
+//    dodawania pojedynczych wagonów do pociągu. Załóżmy, że nazwaliście klasę z pociągiem Train (całkiem przewrotnie)
+//    a klasę wagonu dajmy na to RailwayWagon. Przypuszczalnie tablica wagonów będzie w takim razie określona jako
+//    RailwayWagon[] wagons, natomiast metodka która ma dodawać po jednym wagonie "
+//    public void addOneWagon(RailwayWagon wagon){//ciało metody}. Wtedy to w ciele metody możecie zrealizować
+//    dodawanie poprzez tworzenie za każdym razem nowej tablicy o jeden element większej niż poprzednia i przepisanie starej
+//    do nowej wraz z dodaniem nowego wagonu na koniec i przypisywanie nowej tablicy do pola w klasie/obiekcie.
+
     private double weight;
     private String name;
     private int numberOfPassengers;
     private int numberOfWagons;
     private Wagon[] wagon;
 
+    public void addOneWagon(Wagon wagon) {
 
 
+        Wagon[] newWagon;
+        newWagon = new Wagon[this.wagon.length + 1];
 
+
+        for (int i = 0; i < this.wagon.length; i++) {
+            newWagon[i] = this.wagon[i];
+        }
+        newWagon[this.wagon.length] = wagon;
+        setWagon(newWagon);
+
+
+    }
 
 
     public Wagon[] getWagon() {
         return wagon;
     }
+
     public void setWagon(Wagon[] wagon) {
         this.wagon = wagon;
     }
@@ -88,7 +108,6 @@ public class Train {
                 ", wagon=" + Arrays.toString(wagon) +
                 '}';
     }
-
 
 
 }
