@@ -9,6 +9,7 @@ public class MethodsExample {
         System.out.println(rectangleArea(a, b));
         z = rectangleArea(5, 6);
 
+        System.out.println(z);
         System.out.println(rectangleCircuit(a, b));
 
 

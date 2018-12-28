@@ -42,7 +42,8 @@ public class MatExcTwo {
         avg = sum / param;
 
         System.out.println(avg);
-        int[] tabForHelp = ArraysExample.calculateMinMax(arrayForFive);
+        int[] tabForHelp = ArraysExample.calculateMinMax(arrayForFive);                 // calculateMinMax zwraca tablice z najwieksza i njamniejsza wartoscia,
+                                                                                            // przejdz do klasy ArraysExmaple w day3 tam jest utworzon
         System.out.println("Min to " + tabForHelp[0] + "Max to " + tabForHelp[1]);
 
 

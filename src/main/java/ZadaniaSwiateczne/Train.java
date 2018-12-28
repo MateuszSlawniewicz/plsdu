@@ -12,7 +12,7 @@ public class Train {
 //      -liczba wagonów
 
     // Do klasy reprezentującej pociąg dopisz pole przedstawiające wagony (tablica wagonów).
-//    Uzupełnij metodę toString() z pociągu aby wyświetlała także wagony (Arrays.toString())    // todo
+//    Uzupełnij metodę toString() z pociągu aby wyświetlała także wagony (Arrays.toString())
 //    Utwórz nowy pociąg nadając mu podstawowe wartości a także utwórz kilka wagonów i dodaj je
 //    do pociągu (przez setter), następnie wyświetl obiekt pociągu (przekazując go do System.out.println().
 //    W klasie pociągu utwórz metodę służącą do dodawania po jednym wagonie do tablicy wagonów.
