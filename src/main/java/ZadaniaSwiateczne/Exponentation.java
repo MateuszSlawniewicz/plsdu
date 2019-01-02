@@ -8,7 +8,7 @@ public class Exponentation {
 
 //        Utwórz metodę, do której przekazujesz dwie liczby. Metoda ma wyświetlić wszystkie potęgi
 //        pierwszej liczby do momentu przekroczenia drugiej liczby
-        getExponentation(4, 32);
+        getExponentation(4, 150);
 
     }
 
@@ -16,7 +16,7 @@ public class Exponentation {
         int temp = firstNumber;
         System.out.print(temp + "\t");
 
-        for (int j = 1; j < secondNumber; j++) {
+        for (int j = 1; temp <= secondNumber; j++) {
             temp = temp * firstNumber;
             temp = temp;
             System.out.print(temp + "\t");
