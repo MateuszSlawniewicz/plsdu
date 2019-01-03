@@ -7,23 +7,23 @@ public class Rectangle {
 
     }
 
-    private static void drawRectangle(int a, int b) {
+    private static void drawRectangle(int length, int higth) {
 
         for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < a; j++) {
+            for (int j = 0; j < length; j++) {
                 System.out.print("X");
             }
             System.out.println();
         }
 
-        for (int i = 1; i < b - 1; i++) {
+        for (int i = 1; i < higth - 1; i++) {
             for (int j = 1; j < 2; j++) {
                 System.out.print("X");
             }
-            for (int j = 2; j < a; j++) {
+            for (int j = 2; j < length; j++) {
                 System.out.print(" ");
             }
-            for (int j = a; j <= a; j++) {
+            for (int j = length; j <= length; j++) {
                 System.out.print("X");
             }
 
@@ -31,8 +31,8 @@ public class Rectangle {
             System.out.println();
         }
 
-        for (int i = b - 1; i < b; i++) {
-            for (int j = 0; j < a; j++) {
+        for (int i = higth - 1; i < higth; i++) {
+            for (int j = 0; j < length; j++) {
                 System.out.print("X");
             }
             System.out.println();
