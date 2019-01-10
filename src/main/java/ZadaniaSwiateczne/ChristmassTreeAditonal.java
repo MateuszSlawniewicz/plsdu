@@ -9,9 +9,6 @@ public class ChristmassTreeAditonal {
         christmassTree(10);
 
 
-
-
-
     }
 
     private static void christmassTree(int size) {
@@ -40,25 +37,30 @@ public class ChristmassTreeAditonal {
 //            System.out.println();
 //        }
 //
-        
+
 
         for (int i = 1; i < size; i++) {
-            for (int j = 1; j < size - i; j++)
-                System.out.print("*");
 
-            for (int k = 1; k <= i; k++)
+            for (int j = 1; j < size - i; j++) {
+                System.out.print("*");
+            }
+
+            for (int k = 1; k <= i; k++) {
                 System.out.print(k);
-            for (int k = 1; k < i; k++)
-                System.out.print(i-k);
+            }
+            for (int k = 1; k < i; k++) {
+                System.out.print(i - k);
+            }
 
 
-
-            for (int j = 1; j < size - i; j++)
+            for (int j = 1; j < size - i; j++) {
                 System.out.print("*");
+            }
 
             System.out.println();
 
         }
+
 
     }
 
