@@ -3,7 +3,7 @@ package day5;
 
 import java.util.Objects;
 
-public class Person {
+public class TestPerson {
 
 
     public static final int HEADS_QUANTITY = 1;
@@ -18,18 +18,18 @@ public class Person {
     }
 
 
-    public Person() {
+    public TestPerson() {
         this.identity = ++counter;
 
     }
 
-    public Person(String firstName, String surname, int identity) {
+    public TestPerson(String firstName, String surname, int identity) {
         this.firstName = firstName;
         this.surname = surname;
         this.identity = identity;
     }                                             // wywalamy settery żeby było immutable!
 
-    public Person(String firstName, String surname) {
+    public TestPerson(String firstName, String surname) {
         this.firstName = firstName;
         this.surname = surname;
     }
@@ -38,14 +38,15 @@ public class Person {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return identity == person.identity;
+        TestPerson testPerson = (TestPerson) o;
+        return identity == testPerson.identity;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(identity);
     }
+
 
     public String getFirstName() {
         return firstName;

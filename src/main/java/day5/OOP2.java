@@ -8,26 +8,26 @@ public class OOP2 {
         equalsExample();
         referencesExamples();
         staticFinal();
-        Person person1 = new Person("Janusz", "Kowalski");
-        System.out.println(person1.getIdentity());
+        TestPerson testPerson1 = new TestPerson("Janusz", "Kowalski");
+        System.out.println(testPerson1.getIdentity());
 
 
     }
 
     private static void staticFinal() {
-        Person person1 = new Person();
-        Person person2 = new Person();
-        System.out.println(person1.getIdentity());
-        System.out.println(person2.getIdentity());
-        System.out.println(Person.counter);
+        TestPerson testPerson1 = new TestPerson();
+        TestPerson testPerson2 = new TestPerson();
+        System.out.println(testPerson1.getIdentity());
+        System.out.println(testPerson2.getIdentity());
+        System.out.println(TestPerson.counter);
         CalculatorUtils utils = new CalculatorUtils();
         System.out.println(utils.add(2, 5));
         System.out.println(CalculatorUtils.addition(2, 5));     // bo statyczne to możemy na klasie
-        person1.setFirstName("Anna");
-        ExperimentalObject eo = new ExperimentalObject(1, 2, person1);
+        testPerson1.setFirstName("Anna");
+        ExperimentalObject eo = new ExperimentalObject(1, 2, testPerson1);
         eo.setNotFinalImmutable(6);
-        Person personFromEo = eo.getFinalMutable();
-        personFromEo.setFirstName("Ola");                // dostajemy się do środka obiektu person
+        TestPerson testPersonFromEo = eo.getFinalMutable();
+        testPersonFromEo.setFirstName("Ola");                // dostajemy się do środka obiektu person
     }
 
     private static void referencesExamples() {
@@ -49,18 +49,18 @@ public class OOP2 {
     }
 
     private static void equalsExample() {
-        Person person1 = new Person();
-        Person person2 = new Person();
-        person1.setFirstName("Anna");
-        person2.setFirstName("Anna");
-        person1.setSurname("Nowak");
-        person2.setSurname("Nowak");
-        person1.setIdentity(123);
-        person1.setIdentity(123);
-        System.out.println(person1 == person2);
-        System.out.println(person1.equals(person2));
-        Person person3 = new Person("Anna", "Nowak", 123);
-        person3.setIdentity(111);
+        TestPerson testPerson1 = new TestPerson();
+        TestPerson testPerson2 = new TestPerson();
+        testPerson1.setFirstName("Anna");
+        testPerson2.setFirstName("Anna");
+        testPerson1.setSurname("Nowak");
+        testPerson2.setSurname("Nowak");
+        testPerson1.setIdentity(123);
+        testPerson1.setIdentity(123);
+        System.out.println(testPerson1 == testPerson2);
+        System.out.println(testPerson1.equals(testPerson2));
+        TestPerson testPerson3 = new TestPerson("Anna", "Nowak", 123);
+        testPerson3.setIdentity(111);
 
 
     }

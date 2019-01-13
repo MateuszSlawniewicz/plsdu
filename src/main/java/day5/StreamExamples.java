@@ -17,6 +17,7 @@ public class StreamExamples {
 
         firstStream();
         secondStream();
+        sortExample();
 
     }
 
@@ -43,8 +44,8 @@ public class StreamExamples {
         System.out.println();
 
         String result2 = Arrays.stream(animals)
-                .filter(e-> StringUtils.isNotBlank(e))     //tylko statyczna
-                .map(e->e.trim())
+                .filter(e -> StringUtils.isNotBlank(e))     //tylko statyczna
+                .map(e -> e.trim())
                 .collect(Collectors.joining(", "));
 
         System.out.println(result2);
@@ -72,6 +73,31 @@ public class StreamExamples {
                 .filter(e -> e.length() >= 4)
                 .distinct()
                 .forEach(e -> System.out.println(e));
+
+
+    }
+
+    private static void sortExample() {
+
+        String name1 = "Anna";
+        String name2 = "Ola";
+        System.out.println(name1.compareTo(name2));
+        System.out.println("Sortowanie alfabetyczne");
+        Arrays.stream(animals)
+                .filter(e -> StringUtils.isNotBlank(e))
+                .map(e -> e.trim())                   // map wykonuje operacje na obiekcie i zwraca
+                .distinct()
+                .sorted((e, f) -> e.compareTo(f))
+                .forEach(e -> System.out.print(e + " "));
+        System.out.println("Sortowanie po długości");
+        Arrays.stream(animals)
+                .filter(e -> StringUtils.isNotBlank(e))
+                .map(e -> e.trim())
+                .distinct()
+                .sorted((e, f) -> Integer.valueOf(e.length()).compareTo(Integer.valueOf(f.length())))
+                .forEach(e -> System.out.print(e + " "));
+
+
     }
 }
 

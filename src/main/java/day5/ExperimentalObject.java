@@ -4,16 +4,16 @@ public class ExperimentalObject {
 
     private Integer notFinalImmutable;              // można podmienić wartość na nowy obiekt(wcześniej utworzyć i referencja)
     private final Integer finalImmutable;                     // tylko odczytać, nic się nie zmieni, nie ma settera!!!!!
-    private final Person finalMutable;                   //referencja do obiektu pozostaje, nie możemy stworzyć nowego obiektu i go przypisać, ale można zmienić wartości w obiekcie
+    private final TestPerson finalMutable;                   //referencja do obiektu pozostaje, nie możemy stworzyć nowego obiektu i go przypisać, ale można zmienić wartości w obiekcie
 
 
-    public ExperimentalObject(Integer notFinalImmutable, Integer finalImmutable, Person finalMutable) {
+    public ExperimentalObject(Integer notFinalImmutable, Integer finalImmutable, TestPerson finalMutable) {
         this.notFinalImmutable = notFinalImmutable;
         this.finalImmutable = finalImmutable;
         this.finalMutable = finalMutable;
     }
 
-    public Person getFinalMutable() {
+    public TestPerson getFinalMutable() {
         return finalMutable;
     }
 
