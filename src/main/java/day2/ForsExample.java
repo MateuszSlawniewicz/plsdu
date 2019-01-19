@@ -1,5 +1,7 @@
 package day2;
 
+import java.util.stream.IntStream;
+
 public class ForsExample {
 
     public static void main(String[] args) {
@@ -43,9 +45,17 @@ public class ForsExample {
     }
 
     public static void printFewNaturalNumbers(int endNumber) {
-        for (int i = 0; i < endNumber; i++) {
-            System.out.println(i);
-        }
+//        for (int i = 0; i < endNumber; i++) {
+//            System.out.println(i);
+//        }
+
+        IntStream
+                .range(0, endNumber)
+                .forEach(e -> System.out.println(e));
+
+
+
+
     }
 
 

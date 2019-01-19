@@ -5,6 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamExamples {
@@ -19,7 +20,7 @@ public class StreamExamples {
         secondStream();
         sortExample();
 
-    }
+         }
 
     private static void secondStream() {
         for (String animal : animals) {

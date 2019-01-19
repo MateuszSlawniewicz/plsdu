@@ -1,17 +1,28 @@
 package day4;
 
+import day7.ColourEnum;
+import oopHomeworkJava2.OwnerHolder;
+
 import java.math.BigDecimal;
 
-public class Car {
+public class Car implements OwnerHolder {
     private String model;
-    private String colour;
+    private ColourEnum colour;
     private int hp;
     private String manufacturer;
     private String vin;
     private BigDecimal basePrise;
     private int doorNumber;
     private CarOption[] options;
+    private String owner;
 
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 
     public BigDecimal summaryPrice() {
 
@@ -23,7 +34,7 @@ public class Car {
 
             result = result.add(options[i].getOptionPrice());
         }
-        return result==null?BigDecimal.ZERO:result;
+        return result == null ? BigDecimal.ZERO : result;
     }
 
 
@@ -35,11 +46,11 @@ public class Car {
         this.model = model;                   // this bo to zmienna z klasy, a nie do metody
     }
 
-    public String getColour() {
+    public ColourEnum getColour() {
         return colour;
     }
 
-    public void setColour(String colour) {
+    public void setColour(ColourEnum colour) {
         this.colour = colour;
     }
 
@@ -97,5 +108,10 @@ public class Car {
 
         return manufacturer + " " + summaryPrice();
 
+    }
+
+    @Override
+    public String getOwnerName() {
+        return owner;
     }
 }

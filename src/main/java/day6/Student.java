@@ -43,4 +43,16 @@ public class Student extends Person implements NameHolder{
         return getFirstName() + " " +super.getLastName();   // można ominąć super bo  nie ma innej metody getFirstName
 
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "index=" + index +
+                ", scholarship=" + scholarship +
+                "} " + super.toString();
+    }
+
+
+
+
 }
